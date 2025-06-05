@@ -14,11 +14,14 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         child: Column(
           children: [
-            Image.asset('images/home.jpg', 
+            ClipRRect(
+              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30)),
+            child: Image.asset('images/home.jpg', 
             width: MediaQuery.of(context).size.width,
-            height: 200,
+            height: 250,
             fit: BoxFit.cover
             ),
+            )
           ],
         )
       )
