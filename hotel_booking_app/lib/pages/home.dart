@@ -40,11 +40,15 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      Row(
+                        children: [
                       Icon(Icons.location_on,
                         color: Colors.white),
                         SizedBox(width: 10),
                         Text('Uganda, Kampala',
                         style: AppWidget.whitetextstyle(20.0)
+                      ),
+                      ],
                       ),
                     ],
                     )
