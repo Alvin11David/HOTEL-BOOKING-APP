@@ -50,6 +50,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       ],
                       ),
+                      Text("Hey Alvin! Tell us where you want to go", style: AppWidget.whitetextstyle(24))
                     ],
                     )
                 ),
