@@ -17,7 +17,8 @@ class _HomePageState extends State<HomePage> {
             Image.asset('images/home.jpg', 
             width: MediaQuery.of(context).size.width,
             height: 200,
-            fit: BoxFit.cover),
+            fit: BoxFit.cover
+            ),
           ],
         )
       )
