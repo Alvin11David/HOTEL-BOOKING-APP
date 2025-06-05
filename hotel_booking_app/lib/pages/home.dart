@@ -14,13 +14,29 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         child: Column(
           children: [
-            ClipRRect(
-              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(40), bottomRight: Radius.circular(40)),
-            child: Image.asset('images/home.jpg', 
-            width: MediaQuery.of(context).size.width,
-            height: 250,
-            fit: BoxFit.cover
-            ),
+            Stack(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(40), 
+                  bottomRight: Radius.circular(40)),
+                child: Image.asset('images/home.jpg', 
+                width: MediaQuery.of(context).size.width,
+                height: 280,
+                fit: BoxFit.cover
+                ),
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 250,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(59, 0, 0, 0),
+                    borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(40), 
+                    bottomRight: Radius.circular(40)),
+                  ),
+                ),
+              ],
             )
           ],
         )
