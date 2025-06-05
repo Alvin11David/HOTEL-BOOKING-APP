@@ -27,6 +27,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 ),
                 Container(
+                  padding: EdgeInsets.only(top: 40),
                   width: MediaQuery.of(context).size.width,
                   height: 250,
                   decoration: BoxDecoration(
@@ -36,6 +37,7 @@ class _HomePageState extends State<HomePage> {
                     bottomRight: Radius.circular(40)),
                   ),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Icon(Icons.location_on,
                         color: Colors.white),
