@@ -60,7 +60,13 @@ class _HomePageState extends State<HomePage> {
                           color: const Color.fromARGB(103, 255, 255, 255),
                           borderRadius: BorderRadius.circular(30),
                         ),
-                        child: TextField(),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            prefixIcon: Icon(Icons.search,
+                            color: Colors.white)
+                          )
+                        ),
                       ),
                     ],
                     )
