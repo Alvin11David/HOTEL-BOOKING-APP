@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 40),
+                  padding: EdgeInsets.only(top: 10),
                   width: MediaQuery.of(context).size.width,
                   height: 250,
                   decoration: BoxDecoration(
