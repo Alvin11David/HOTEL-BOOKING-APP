@@ -35,6 +35,12 @@ class _HomePageState extends State<HomePage> {
                     bottomLeft: Radius.circular(40), 
                     bottomRight: Radius.circular(40)),
                   ),
+                  child: Column(
+                    children: [
+                      Icon(Icons.location_on,
+                        color: Colors.white)
+                    ],
+                    )
                 ),
               ],
             )
