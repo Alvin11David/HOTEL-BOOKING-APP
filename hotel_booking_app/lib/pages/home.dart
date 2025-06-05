@@ -38,7 +38,8 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     children: [
                       Icon(Icons.location_on,
-                        color: Colors.white)
+                        color: Colors.white),
+                        SizedBox(width: 10),
                     ],
                     )
                 ),
