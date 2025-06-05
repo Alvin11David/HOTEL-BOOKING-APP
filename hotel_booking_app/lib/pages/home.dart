@@ -50,7 +50,18 @@ class _HomePageState extends State<HomePage> {
                       ),
                       ],
                       ),
-                      Text("Hey Alvin! Tell us where you want to go", style: AppWidget.whitetextstyle(24))
+                      SizedBox(height: 30,),
+                      Text("Hey Alvin! Tell us where you want to go", style: AppWidget.whitetextstyle(24)),
+                      SizedBox(height: 20,),
+                      Container(
+                        margin: EdgeInsets.only(right: 20.0),
+                        width: MediaQuery.of(context).size.width,
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(103, 255, 255, 255),
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        child: TextField(),
+                      ),
                     ],
                     )
                 ),
