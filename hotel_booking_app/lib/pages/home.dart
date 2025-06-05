@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         child: Column(
           children: [
-            Image.asset('images/')
+            Image.asset('images/home.jpg', width: MediaQuery.of(context).size.width,),
           ],
         )
       )
