@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotel_booking_app/services/widget_support.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -42,6 +43,9 @@ class _HomePageState extends State<HomePage> {
                       Icon(Icons.location_on,
                         color: Colors.white),
                         SizedBox(width: 10),
+                        Text('Uganda, Kampala',
+                        style: AppWidget.whitetextstyle(20.0)
+                      ),
                     ],
                     )
                 ),
