@@ -247,7 +247,7 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: 20),
               Container(
                 margin: EdgeInsets.only(left: 20),
-                height: 250,
+                height: 280,
                 child: ListView(
                   scrollDirection:Axis.horizontal,
                   children: [
@@ -272,6 +272,15 @@ class _HomePageState extends State<HomePage> {
                           Padding(
                             padding: const EdgeInsets.only(left: 20),
                             child: Text('Kenya', style: AppWidget.headlinetextstyle(20),),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: Row(
+                              children: [
+                                Icon(Icons.hotel),
+                                Text('10 Hotels', style: AppWidget.normaltextstyle(18)),
+                              ],
+                            ),
                           )
                         ]
                       )
