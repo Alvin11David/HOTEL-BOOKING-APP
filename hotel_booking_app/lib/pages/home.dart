@@ -14,6 +14,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Container(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Stack(
               children: [
@@ -76,7 +77,11 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            Text("The most relevant", style: AppWidget.normaltextstyle(24))
+            SizedBox(height: 20,),
+            Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: Text("The most relevant", style: AppWidget.headlinetextstyle(24)),
+            )
           ],
         )
       )
