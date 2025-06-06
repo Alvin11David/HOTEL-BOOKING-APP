@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ],
                       ),
-                      SizedBox(height: 30),
+                      SizedBox(height: 26),
                       Text(
                         "Hey Alvin! Tell us where you want to go",
                         style: AppWidget.whitetextstyle(22),
@@ -99,6 +99,7 @@ class _HomePageState extends State<HomePage> {
                   Container(
                     margin: EdgeInsets.only(left: 15),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                      ClipRRect(
                       borderRadius: BorderRadius.circular(20),
@@ -107,6 +108,8 @@ class _HomePageState extends State<HomePage> {
                         width: MediaQuery.of(context).size.width / 1.5,
                       ),
                     ),
+                    SizedBox(height: 20),
+                    Text("Hotel Beach", style: AppWidget.headlinetextstyle(18)),
                     ]
                     ),
                   ),
