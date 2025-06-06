@@ -244,6 +244,7 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.only(left: 15),
                 child: Text('Discover new places', style: AppWidget.headlinetextstyle(24)),
               ),
+              SizedBox(height: 20),
               Container(
                 margin: EdgeInsets.only(left: 20),
                 height: 200,
@@ -253,17 +254,22 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       child: Column(
                         children: [
-                          Image.asset('assets/images/mumbai.jpg', 
-                          height: 120, 
-                          width: 120, 
-                          fit: BoxFit.cover
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(30),
+                            child: Image.asset(
+                              'images/mumbai.jpg', 
+                            height: 200, 
+                            width: 180, 
+                            fit: BoxFit.cover,
+                            ),
                           )
                         ]
                       )
                     )
                   ]
                 ),
-              )
+              ),
+              SizedBox(height: 50),
             ],
           ),
         ),
