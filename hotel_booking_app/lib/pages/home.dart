@@ -247,12 +247,17 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: 20),
               Container(
                 margin: EdgeInsets.only(left: 20),
-                height: 200,
+                height: 250,
                 child: ListView(
                   scrollDirection:Axis.horizontal,
                   children: [
                     Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(30),
+                      ),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(30),
@@ -262,7 +267,9 @@ class _HomePageState extends State<HomePage> {
                             width: 180, 
                             fit: BoxFit.cover,
                             ),
-                          )
+                          ),
+                          SizedBox(height: 10),
+                          Text('Kenya', style: AppWidget.headlinetextstyle(20),)
                         ]
                       )
                     )
