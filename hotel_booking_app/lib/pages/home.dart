@@ -97,6 +97,9 @@ class _HomePageState extends State<HomePage> {
                 scrollDirection: Axis.horizontal,
                 children: [
                   Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white
+                    ),
                     margin: EdgeInsets.only(left: 15),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -108,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                         width: MediaQuery.of(context).size.width / 1.5,
                       ),
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 5),
                     Text("Hotel Beach", style: AppWidget.headlinetextstyle(18)),
                     ]
                     ),
