@@ -112,7 +112,16 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     SizedBox(height: 5),
-                    Text("Hotel Beach", style: AppWidget.headlinetextstyle(18)),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text("Hotel Beach", style: AppWidget.headlinetextstyle(18)),
+                          Text("\$20", style: AppWidget.headlinetextstyle(16),)
+                        ],
+                      ),
+                    ),
                     ]
                     ),
                   ),
