@@ -277,7 +277,8 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(left: 20),
                             child: Row(
                               children: [
-                                Icon(Icons.hotel),
+                                Icon(Icons.hotel, color: Colors.blue),
+                                SizedBox(width: 5),
                                 Text('10 Hotels', style: AppWidget.normaltextstyle(18)),
                               ],
                             ),
