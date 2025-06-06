@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                       ],
                       ),
                       SizedBox(height: 30,),
-                      Text("Hey Alvin! Tell us where you want to go", style: AppWidget.whitetextstyle(23)),
+                      Text("Hey Alvin! Tell us where you want to go", style: AppWidget.whitetextstyle(22)),
                       SizedBox(height: 20,),
                       Container(
                         padding: EdgeInsets.only(bottom: 5, top: 5),
@@ -80,7 +80,13 @@ class _HomePageState extends State<HomePage> {
             SizedBox(height: 20,),
             Padding(
               padding: const EdgeInsets.only(left: 10),
-              child: Text("The most relevant", style: AppWidget.headlinetextstyle(24)),
+              child: Text("The most relevant", style: AppWidget.headlinetextstyle(22)),
+            ),
+            ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                Container()
+              ],
             )
           ],
         )
