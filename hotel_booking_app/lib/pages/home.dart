@@ -251,40 +251,44 @@ class _HomePageState extends State<HomePage> {
                 child: ListView(
                   scrollDirection:Axis.horizontal,
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(30),
+                    Material(
+                      elevation: 2,
+                      borderRadius: BorderRadius.circular(30),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(30),
+                              child: Image.asset(
+                                'images/mumbai.jpg', 
+                              height: 200, 
+                              width: 180, 
+                              fit: BoxFit.cover,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: Text('Kenya', style: AppWidget.headlinetextstyle(20),),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: Row(
+                                children: [
+                                  Icon(Icons.hotel, color: Colors.blue),
+                                  SizedBox(width: 5),
+                                  Text('10 Hotels', style: AppWidget.normaltextstyle(18)),
+                                ],
+                              ),
+                            )
+                          ]
+                        )
                       ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(30),
-                            child: Image.asset(
-                              'images/mumbai.jpg', 
-                            height: 200, 
-                            width: 180, 
-                            fit: BoxFit.cover,
-                            ),
-                          ),
-                          SizedBox(height: 10),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 20),
-                            child: Text('Kenya', style: AppWidget.headlinetextstyle(20),),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 20),
-                            child: Row(
-                              children: [
-                                Icon(Icons.hotel, color: Colors.blue),
-                                SizedBox(width: 5),
-                                Text('10 Hotels', style: AppWidget.normaltextstyle(18)),
-                              ],
-                            ),
-                          )
-                        ]
-                      )
                     )
                   ]
                 ),
