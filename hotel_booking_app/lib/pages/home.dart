@@ -306,6 +306,49 @@ class _HomePageState extends State<HomePage> {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(30),
                                 child: Image.asset(
+                                  'images/bali.jpg', 
+                                height: 200, 
+                                width: 180, 
+                                fit: BoxFit.cover,
+                                ),
+                              ),
+                              SizedBox(height: 10),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 20),
+                                child: Text('Bali', style: AppWidget.headlinetextstyle(20),),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 20),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.hotel, color: Colors.blue),
+                                    SizedBox(width: 5),
+                                    Text('20 Hotels', style: AppWidget.normaltextstyle(18)),
+                                  ],
+                                ),
+                              )
+                            ]
+                          )
+                        ),
+                        
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 20),
+                      child: Material(
+                        elevation: 2,
+                        borderRadius: BorderRadius.circular(30),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(30),
+                                child: Image.asset(
                                   'images/newyork.jpg', 
                                 height: 200, 
                                 width: 180, 
@@ -331,7 +374,7 @@ class _HomePageState extends State<HomePage> {
                           )
                         ),
                       ),
-                    )
+                    ),
                   ]
                 ),
               ),
