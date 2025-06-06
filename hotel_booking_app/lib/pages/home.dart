@@ -306,7 +306,7 @@ class _HomePageState extends State<HomePage> {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(30),
                                 child: Image.asset(
-                                  'images/mumbai.jpg', 
+                                  'images/newyork.jpg', 
                                 height: 200, 
                                 width: 180, 
                                 fit: BoxFit.cover,
@@ -315,7 +315,7 @@ class _HomePageState extends State<HomePage> {
                               SizedBox(height: 10),
                               Padding(
                                 padding: const EdgeInsets.only(left: 20),
-                                child: Text('Tanzania', style: AppWidget.headlinetextstyle(20),),
+                                child: Text('Newyork', style: AppWidget.headlinetextstyle(20),),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(left: 20),
