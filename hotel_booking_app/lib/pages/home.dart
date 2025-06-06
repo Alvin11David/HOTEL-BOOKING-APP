@@ -115,9 +115,9 @@ class _HomePageState extends State<HomePage> {
                     Padding(
                       padding: const EdgeInsets.only(left: 20),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text("Hotel Beach", style: AppWidget.headlinetextstyle(18)),
+                          SizedBox(width: MediaQuery.of(context).size.width/4),
                           Text("\$20", style: AppWidget.headlinetextstyle(16),)
                         ],
                       ),
