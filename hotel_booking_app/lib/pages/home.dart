@@ -112,7 +112,7 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(20),
                           child: Image.asset(
                             'assets/images/hotel1.jpg',
-                            width: MediaQuery.of(context).size.width / 1.5,
+                            width: MediaQuery.of(context).size.width / 1.5, fit: BoxFit.cover, height: 230,
                           ),
                         ),
                         SizedBox(height: 10),
