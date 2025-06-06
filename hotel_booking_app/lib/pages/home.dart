@@ -323,7 +323,7 @@ class _HomePageState extends State<HomePage> {
                                   children: [
                                     Icon(Icons.hotel, color: Colors.blue),
                                     SizedBox(width: 5),
-                                    Text('20 Hotels', style: AppWidget.normaltextstyle(18)),
+                                    Text('9 Hotels', style: AppWidget.normaltextstyle(18)),
                                   ],
                                 ),
                               )
