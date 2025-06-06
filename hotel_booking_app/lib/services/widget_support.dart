@@ -15,4 +15,11 @@ class AppWidget {
       fontWeight: FontWeight.bold,
     );
   }
+  static TextStyle normaltextstyle(double size) {
+    return TextStyle(
+      color: Colors.black,
+      fontSize: size,
+      fontWeight: FontWeight.w500,
+    );
+  }
 }
