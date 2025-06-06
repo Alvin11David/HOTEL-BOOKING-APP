@@ -64,7 +64,9 @@ class _HomePageState extends State<HomePage> {
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             prefixIcon: Icon(Icons.search,
-                            color: Colors.white)
+                            color: Colors.white),
+                            hintText: 'Search Places',
+                            hintStyle: AppWidget.whitetextstyle(15)
                           )
                         ),
                       ),
