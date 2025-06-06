@@ -51,9 +51,10 @@ class _HomePageState extends State<HomePage> {
                       ],
                       ),
                       SizedBox(height: 30,),
-                      Text("Hey Alvin! Tell us where you want to go", style: AppWidget.whitetextstyle(24)),
+                      Text("Hey Alvin! Tell us where you want to go", style: AppWidget.whitetextstyle(23)),
                       SizedBox(height: 20,),
                       Container(
+                        padding: EdgeInsets.only(bottom: 5, top: 5),
                         margin: EdgeInsets.only(right: 20.0),
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
@@ -65,8 +66,8 @@ class _HomePageState extends State<HomePage> {
                             border: InputBorder.none,
                             prefixIcon: Icon(Icons.search,
                             color: Colors.white),
-                            hintText: 'Search Places',
-                            hintStyle: AppWidget.whitetextstyle(15)
+                            hintText: 'Search Places...',
+                            hintStyle: AppWidget.whitetextstyle(20)
                           )
                         ),
                       ),
