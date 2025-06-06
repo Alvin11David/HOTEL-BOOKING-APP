@@ -22,14 +22,14 @@ class _HomePageState extends State<HomePage> {
                   borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(40), 
                   bottomRight: Radius.circular(40)),
-                child: Image.asset('images/home.jpg', 
+                child: Image.asset('assets/images/home.jpg', 
                 width: MediaQuery.of(context).size.width,
                 height: 280,
                 fit: BoxFit.cover
                 ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 10, left: 5,),
+                  padding: EdgeInsets.only(top: 35, left: 5,),
                   width: MediaQuery.of(context).size.width,
                   height: 250,
                   decoration: BoxDecoration(
