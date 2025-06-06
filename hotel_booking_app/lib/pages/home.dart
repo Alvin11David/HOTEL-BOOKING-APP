@@ -82,11 +82,17 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.only(left: 10),
               child: Text("The most relevant", style: AppWidget.headlinetextstyle(22)),
             ),
-            ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                Container()
-              ],
+            SizedBox(height: 20),
+            Container(
+              height: 200,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Container(
+                    child: Image.asset("assets/images/hotel1.jpg", width: MediaQuery.of(context).size.width/1.5,)
+                  )
+                ],
+              ),
             )
           ],
         )
