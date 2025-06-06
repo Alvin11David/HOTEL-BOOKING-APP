@@ -315,7 +315,7 @@ class _HomePageState extends State<HomePage> {
                               SizedBox(height: 10),
                               Padding(
                                 padding: const EdgeInsets.only(left: 20),
-                                child: Text('Kenya', style: AppWidget.headlinetextstyle(20),),
+                                child: Text('Tanzania', style: AppWidget.headlinetextstyle(20),),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(left: 20),
@@ -323,7 +323,7 @@ class _HomePageState extends State<HomePage> {
                                   children: [
                                     Icon(Icons.hotel, color: Colors.blue),
                                     SizedBox(width: 5),
-                                    Text('10 Hotels', style: AppWidget.normaltextstyle(18)),
+                                    Text('20 Hotels', style: AppWidget.normaltextstyle(18)),
                                   ],
                                 ),
                               )
