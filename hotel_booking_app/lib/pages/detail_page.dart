@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotel_booking_app/services/widget_support.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({super.key});
@@ -13,6 +14,7 @@ class _DetailPageState extends State<DetailPage> {
     return Scaffold(
       body: Container(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Stack(
               children: [
@@ -46,6 +48,17 @@ class _DetailPageState extends State<DetailPage> {
                 )
               ],
             ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 20),
+                  Text("Hotel Beach", style: AppWidget.headlinetextstyle(27)),
+                  Text("\$20",style: AppWidget.normaltextstyle(26)),
+                ],
+              ),
+            )
           ],
         ),
       ),
