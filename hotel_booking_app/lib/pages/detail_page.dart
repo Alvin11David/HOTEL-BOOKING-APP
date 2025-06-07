@@ -105,15 +105,17 @@ class _DetailPageState extends State<DetailPage> {
                     SizedBox(height: 10),
                     Text("This is a beautiful hotel located near the beach offers a cozy seaside escape with stunning ocean views, modern rooms, and direct beach access. Guests can enjoy an infinity pool, fresh seafood dining, and relaxing beach vibes—perfect for a peaceful getaway.", style: AppWidget.normaltextstyle(18)),
                     SizedBox(height: 20),
-                    Container(
-                      height: 200,
-                      width: MediaQuery.of(context).size.width,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("\$100 for 4 nights", style: AppWidget.headlinetextstyle(18),)
-                        ],
-                      )
+                    Material(
+                      child: Container(
+                        height: 200,
+                        width: MediaQuery.of(context).size.width,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("\$100 for 4 nights", style: AppWidget.headlinetextstyle(18),)
+                          ],
+                        )
+                      ),
                     )
                   ],
                 ),
