@@ -31,11 +31,13 @@ class _DetailPageState extends State<DetailPage> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 20, left: 20),
+                  padding: EdgeInsets.all(5),
+                  margin: EdgeInsets.only(top: 50, left: 20),
                   decoration: BoxDecoration(
-                    color: Colors.black),
+                    color: const Color.fromARGB(255, 0, 0, 0), borderRadius: BorderRadius.circular(60)),
                     child: Icon(Icons.arrow_back,
-                    color: Colors.white),
+                    color: Colors.white,
+                    size: 30),
                 )
               ],
             ),
