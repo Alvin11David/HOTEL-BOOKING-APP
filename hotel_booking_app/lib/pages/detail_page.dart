@@ -56,6 +56,7 @@ class _DetailPageState extends State<DetailPage> {
                   SizedBox(height: 20),
                   Text("Hotel Beach", style: AppWidget.headlinetextstyle(27)),
                   Text("\$20",style: AppWidget.normaltextstyle(26)),
+                  Divider(thickness: 2,)
                 ],
               ),
             )
