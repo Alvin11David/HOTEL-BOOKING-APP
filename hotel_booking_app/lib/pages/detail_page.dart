@@ -179,6 +179,14 @@ class _DetailPageState extends State<DetailPage> {
                                   )
                                   )
                               ),
+                            ),
+                            Container(
+                              height: 50,
+                              width: MediaQuery.of(context).size.width,
+                              decoration: BoxDecoration(
+                                color:Colors.blue
+                              ),
+                              child: Center(child: Text("Book Now", style: AppWidget.whitetextstyle(20)))
                             )
                           ],
                         )
