@@ -118,11 +118,28 @@ class _DetailPageState extends State<DetailPage> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("\$100 for 4 nights", style: AppWidget.headlinetextstyle(18),)
+                            SizedBox(height: 10),
+                            Text("\$100 for 4 nights", style: AppWidget.headlinetextstyle(18),),
+                            SizedBox(height: 3),
+                            Text("Check-in Date", style: AppWidget.normaltextstyle(18)),
+                            Divider(),
+                            Row(
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.blue
+                                  ),
+                                  child: Icon(Icons.calendar_month,
+                                  color: Colors.white,
+                                  size: 30)
+                                )
+                              ],
+                            )
                           ],
                         )
                       ),
-                    )
+                    ),
+                    SizedBox(height: 20),
                   ],
                 ),
               ),
