@@ -110,7 +110,7 @@ class _DetailPageState extends State<DetailPage> {
                       borderRadius: BorderRadius.circular(20),
                       child: Container(
                         padding: EdgeInsets.all(10),
-                        height: 200,
+                       
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20)
@@ -136,8 +136,49 @@ class _DetailPageState extends State<DetailPage> {
                                   size: 30)
                                 ),
                                 SizedBox(width: 10),
-                                Text("08 Jun 2025", style: AppWidget.normaltextstyle(18)),
+                                Text("08,Jun 2025", style: AppWidget.normaltextstyle(18)),
                               ],
+                            ),
+                            SizedBox(height: 10),
+                            Text("\$100 for 4 nights", style: AppWidget.headlinetextstyle(18),),
+                            SizedBox(height: 3),
+                            Text("Check-out Date", style: AppWidget.normaltextstyle(18)),
+                            Divider(),
+                            Row(
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.all(5),
+                                  decoration: BoxDecoration(
+                                    color: Colors.blue,
+                                    borderRadius: BorderRadius.circular(10)
+                                  ),
+                                  child: Icon(Icons.calendar_month,
+                                  color: Colors.white,
+                                  size: 30)
+                                ),
+                                SizedBox(width: 10),
+                                Text("29,Jun 2025", style: AppWidget.normaltextstyle(18)),
+                              ],
+                            ),
+                            SizedBox(height: 5),
+                            Text("Number of Guests", style: AppWidget.normaltextstyle(18)),
+                            SizedBox(height: 5),
+                            Container(
+                              padding: EdgeInsets.only(left: 20),
+                              decoration: BoxDecoration(
+                                color:Color(0xffececf8),
+                                borderRadius: BorderRadius.circular(10)),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  border: InputBorder.none,
+                                  hintText: "1",
+                                  hintStyle: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w500
+                                  )
+                                  )
+                              ),
                             )
                           ],
                         )
