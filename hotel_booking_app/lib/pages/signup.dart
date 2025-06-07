@@ -16,6 +16,7 @@ class _SignUpPageState extends State<SignUpPage> {
       body: Container(
         margin: EdgeInsets.only(top: 40),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Center(
               child: Image.asset("images/signup.png",
@@ -25,10 +26,14 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
             ),
             SizedBox(height: 5,),
-            Text("Sign Up", style: AppWidget.headlinetextstyle(25),),
+            Center(child: Text("Sign Up", style: AppWidget.headlinetextstyle(25),)),
             SizedBox(height: 5,),
-            Text("Please enter the details to continue.", style: AppWidget.normaltextstyle(20)),
+            Center(child: Text("Please enter the details to continue.", style: AppWidget.normaltextstyle(20))),
             SizedBox(height: 10,),
+            Padding(
+              padding: const EdgeInsets.only(left: 30),
+              child: Text("Name", style: AppWidget.headlinetextstyle(20)),
+            ),
             Container(
               margin: EdgeInsets.only(left:30, right: 30),
               decoration: BoxDecoration(
@@ -40,7 +45,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 prefixIcon: Icon(Icons.person,
                 color: Colors.green),
                 hintText: "Enter Your Name",
-                hintStyle: AppWidget.normaltextstyle(22)
+                hintStyle: AppWidget.normaltextstyle(18)
                 )
               )
             )
