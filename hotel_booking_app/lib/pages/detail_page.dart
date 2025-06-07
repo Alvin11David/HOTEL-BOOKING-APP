@@ -167,7 +167,7 @@ class _DetailPageState extends State<DetailPage> {
                               padding: EdgeInsets.only(left: 20),
                               decoration: BoxDecoration(
                                 color:Color(0xffececf8),
-                                borderRadius: BorderRadius.circular(10)),
+                                borderRadius: BorderRadius.circular(20)),
                               child: TextField(
                                 decoration: InputDecoration(
                                   border: InputBorder.none,
@@ -180,10 +180,12 @@ class _DetailPageState extends State<DetailPage> {
                                   )
                               ),
                             ),
+                            SizedBox(height: 20),
                             Container(
                               height: 50,
                               width: MediaQuery.of(context).size.width,
                               decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
                                 color:Colors.blue
                               ),
                               child: Center(child: Text("Book Now", style: AppWidget.whitetextstyle(20)))
