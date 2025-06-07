@@ -113,6 +113,17 @@ class _SignUpPageState extends State<SignUpPage> {
                 hintStyle: AppWidget.normaltextstyle(18)
                 )
               )
+            ),
+            SizedBox(height: 20,),
+            Container(
+              height: 60,
+              margin: EdgeInsets.only(left:30, right: 30),
+              decoration: BoxDecoration(
+                color: Colors.green,
+                borderRadius: BorderRadius.circular(20)
+              ),
+              width: MediaQuery.of(context).size.width/1.0,
+              child: Center(child: Text("Sign Up", style: AppWidget.whitetextstyle(20)))
             )
             ],
           ),
