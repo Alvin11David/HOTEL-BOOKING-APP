@@ -35,7 +35,14 @@ class _SignUpPageState extends State<SignUpPage> {
                 borderRadius: BorderRadius.circular(20),
                 color: Color(0xffececf8),
               ),
-              child: TextField()
+              child: TextField(
+                decoration: InputDecoration(border: InputBorder.none,
+                prefixIcon: Icon(Icons.person,
+                color: Colors.green),
+                hintText: "Enter Your Name",
+                hintStyle: AppWidget.normaltextstyle(22)
+                )
+              )
             )
           ],
         ),
