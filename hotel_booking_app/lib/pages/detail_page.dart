@@ -59,11 +59,16 @@ class _DetailPageState extends State<DetailPage> {
                   Divider(thickness: 2,),
                   SizedBox(height: 10),
                   Text("What this place offers", style: AppWidget.headlinetextstyle(22)),
+                  SizedBox(height: 5),
                   Row(
                     children: [
-                      Icon(Icons.wifi, color: Colors.blue),
+                      Icon(Icons.wifi, color: Colors.blue, size: 30),
                       SizedBox(width: 10),
                       Text("Free WiFi", style: AppWidget.normaltextstyle(20)),
+                      SizedBox(width: 40),
+                      Icon(Icons.tv, color: Colors.blue, size: 30),
+                      SizedBox(width: 10),
+                      Text("HD TV", style: AppWidget.normaltextstyle(20)),
                     ],
                   )
                 ],
