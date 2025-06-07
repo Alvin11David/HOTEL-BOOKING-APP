@@ -114,7 +114,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 )
               )
             ),
-            SizedBox(height: 20,),
+            SizedBox(height: 30,),
             Container(
               height: 60,
               margin: EdgeInsets.only(left:30, right: 30),
@@ -123,7 +123,11 @@ class _SignUpPageState extends State<SignUpPage> {
                 borderRadius: BorderRadius.circular(20)
               ),
               width: MediaQuery.of(context).size.width/1.0,
-              child: Center(child: Text("Sign Up", style: AppWidget.whitetextstyle(20)))
+              child: Center(child: Text("Sign Up", style: TextStyle(
+                color: Colors.white,
+                fontSize: 22,
+                fontWeight: FontWeight.bold
+              )))
             )
             ],
           ),
