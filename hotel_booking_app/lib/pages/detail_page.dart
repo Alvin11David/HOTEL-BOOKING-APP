@@ -134,7 +134,9 @@ class _DetailPageState extends State<DetailPage> {
                                   child: Icon(Icons.calendar_month,
                                   color: Colors.white,
                                   size: 30)
-                                )
+                                ),
+                                SizedBox(width: 10),
+                                Text("08 Jun 2025", style: AppWidget.normaltextstyle(18)),
                               ],
                             )
                           ],
