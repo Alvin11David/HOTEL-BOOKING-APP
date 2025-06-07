@@ -267,7 +267,7 @@ class _HomePageState extends State<HomePage> {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(30),
                                 child: Image.asset(
-                                  'images/mumbai.jpg', 
+                                  'assets/images/mumbai.jpg', 
                                 height: 200, 
                                 width: 180, 
                                 fit: BoxFit.cover,
@@ -309,7 +309,7 @@ class _HomePageState extends State<HomePage> {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(30),
                                 child: Image.asset(
-                                  'images/bali.jpg', 
+                                  'assets/images/bali.jpg', 
                                 height: 200, 
                                 width: 180, 
                                 fit: BoxFit.cover,
@@ -352,7 +352,7 @@ class _HomePageState extends State<HomePage> {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(30),
                                 child: Image.asset(
-                                  'images/newyork.jpg', 
+                                  'assets/images/newyork.jpg', 
                                 height: 200, 
                                 width: 180, 
                                 fit: BoxFit.cover,
@@ -394,7 +394,7 @@ class _HomePageState extends State<HomePage> {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(30),
                                 child: Image.asset(
-                                  'images/dubai.jpg', 
+                                  'assets/images/dubai.jpg', 
                                 height: 200, 
                                 width: 180, 
                                 fit: BoxFit.cover,

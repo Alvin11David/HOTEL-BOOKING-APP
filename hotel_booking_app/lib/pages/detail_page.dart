@@ -17,8 +17,10 @@ class _DetailPageState extends State<DetailPage> {
             Stack(children: [
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height/2,
-                child: Image.asset("name"),
+                height: MediaQuery.of(context).size.height/2.5,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(50), bottomRight: Radius.circular(50)),
+                  child: Image.asset("assets/images/hotel1.jpg", fit: BoxFit.cover)),
               )
             ],)
           ],
