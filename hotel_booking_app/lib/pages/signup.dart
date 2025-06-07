@@ -34,6 +34,7 @@ class _SignUpPageState extends State<SignUpPage> {
               padding: const EdgeInsets.only(left: 30),
               child: Text("Name", style: AppWidget.headlinetextstyle(20)),
             ),
+            SizedBox(height: 10,),
             Container(
               margin: EdgeInsets.only(left:30, right: 30),
               decoration: BoxDecoration(
@@ -43,7 +44,7 @@ class _SignUpPageState extends State<SignUpPage> {
               child: TextField(
                 decoration: InputDecoration(border: InputBorder.none,
                 prefixIcon: Icon(Icons.person,
-                color: Colors.green),
+                color: const Color.fromARGB(255, 2, 77, 138)),
                 hintText: "Enter Your Name",
                 hintStyle: AppWidget.normaltextstyle(18)
                 )
