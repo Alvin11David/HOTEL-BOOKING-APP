@@ -106,13 +106,14 @@ class _DetailPageState extends State<DetailPage> {
                     Text("This is a beautiful hotel located near the beach offers a cozy seaside escape with stunning ocean views, modern rooms, and direct beach access. Guests can enjoy an infinity pool, fresh seafood dining, and relaxing beach vibes—perfect for a peaceful getaway.", style: AppWidget.normaltextstyle(18)),
                     SizedBox(height: 20),
                     Material(
-                      elevation: 3,
+                      elevation: 2,
+                      borderRadius: BorderRadius.circular(20),
                       child: Container(
-                        padding: EdgeInsets.all(8),
+                        padding: EdgeInsets.all(10),
                         height: 200,
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30)
+                          borderRadius: BorderRadius.circular(20)
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
