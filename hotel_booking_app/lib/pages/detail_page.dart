@@ -49,14 +49,23 @@ class _DetailPageState extends State<DetailPage> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20),
+              padding: const EdgeInsets.only(left: 20, right: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 20),
                   Text("Hotel Beach", style: AppWidget.headlinetextstyle(27)),
                   Text("\$20",style: AppWidget.normaltextstyle(26)),
-                  Divider(thickness: 2,)
+                  Divider(thickness: 2,),
+                  SizedBox(height: 10),
+                  Text("What this place offers", style: AppWidget.headlinetextstyle(22)),
+                  Row(
+                    children: [
+                      Icon(Icons.wifi, color: Colors.blue),
+                      SizedBox(width: 10),
+                      Text("Free WiFi", style: AppWidget.normaltextstyle(20)),
+                    ],
+                  )
                 ],
               ),
             )
