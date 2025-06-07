@@ -108,6 +108,7 @@ class _DetailPageState extends State<DetailPage> {
                     Material(
                       elevation: 3,
                       child: Container(
+                        padding: EdgeInsets.all(8),
                         height: 200,
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
