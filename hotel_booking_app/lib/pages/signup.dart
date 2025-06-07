@@ -49,6 +49,27 @@ class _SignUpPageState extends State<SignUpPage> {
                 hintStyle: AppWidget.normaltextstyle(18)
                 )
               )
+            ),
+            SizedBox(height: 10,),
+            Padding(
+              padding: const EdgeInsets.only(left: 30),
+              child: Text("Email", style: AppWidget.headlinetextstyle(20)),
+            ),
+            SizedBox(height: 10,),
+            Container(
+              margin: EdgeInsets.only(left:30, right: 30),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Color(0xffececf8),
+              ),
+              child: TextField(
+                decoration: InputDecoration(border: InputBorder.none,
+                prefixIcon: Icon(Icons.email,
+                color: const Color.fromARGB(255, 2, 77, 138)),
+                hintText: "Enter Your Email",
+                hintStyle: AppWidget.normaltextstyle(18)
+                )
+              )
             )
           ],
         ),
