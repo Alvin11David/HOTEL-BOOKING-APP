@@ -28,9 +28,11 @@ class _SignUpPageState extends State<SignUpPage> {
             Text("Sign Up", style: AppWidget.headlinetextstyle(25),),
             SizedBox(height: 5,),
             Text("Please enter the details to continue.", style: AppWidget.normaltextstyle(20)),
+            SizedBox(height: 10,),
             Container(
-              margin: EdgeInsets.only(left:20, right: 20),
+              margin: EdgeInsets.only(left:30, right: 30),
               decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
                 color: Color(0xffececf8),
               ),
               child: TextField()
