@@ -126,8 +126,10 @@ class _DetailPageState extends State<DetailPage> {
                             Row(
                               children: [
                                 Container(
+                                  padding: EdgeInsets.all(5),
                                   decoration: BoxDecoration(
-                                    color: Colors.blue
+                                    color: Colors.blue,
+                                    borderRadius: BorderRadius.circular(10)
                                   ),
                                   child: Icon(Icons.calendar_month,
                                   color: Colors.white,
