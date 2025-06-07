@@ -115,20 +115,34 @@ class _SignUpPageState extends State<SignUpPage> {
               )
             ),
             SizedBox(height: 30,),
-            Container(
-              height: 60,
-              margin: EdgeInsets.only(left:30, right: 30),
-              decoration: BoxDecoration(
-                color: Colors.green,
-                borderRadius: BorderRadius.circular(20)
+            Center(
+              child: Container(
+                height: 60,
+                margin: EdgeInsets.only(left:30, right: 30),
+                decoration: BoxDecoration(
+                  color: Colors.green,
+                  borderRadius: BorderRadius.circular(20)
+                ),
+                width: MediaQuery.of(context).size.width/2.0,
+                child: Center(child: Text("Sign Up", style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold
+                )))
               ),
-              width: MediaQuery.of(context).size.width/1.0,
-              child: Center(child: Text("Sign Up", style: TextStyle(
-                color: Colors.white,
-                fontSize: 22,
-                fontWeight: FontWeight.bold
-              )))
-            )
+            ),
+            SizedBox(height: 20,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+              Text("Already have an account?", style: AppWidget.normaltextstyle(18)),
+              SizedBox(width: 5,),
+              Text("Sign In", style: TextStyle(
+                color: Colors.blue,
+                fontSize: 18,
+                fontWeight: FontWeight.bold))
+            ])
+
             ],
           ),
         ),
