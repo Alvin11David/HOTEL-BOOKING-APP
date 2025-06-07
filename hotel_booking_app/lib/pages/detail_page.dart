@@ -30,14 +30,19 @@ class _DetailPageState extends State<DetailPage> {
                     ),
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.all(5),
-                  margin: EdgeInsets.only(top: 50, left: 20),
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 0, 0, 0), borderRadius: BorderRadius.circular(60)),
-                    child: Icon(Icons.arrow_back,
-                    color: Colors.white,
-                    size: 30),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(5),
+                    margin: EdgeInsets.only(top: 50, left: 20),
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 0, 0, 0), borderRadius: BorderRadius.circular(60)),
+                      child: Icon(Icons.arrow_back,
+                      color: Colors.white,
+                      size: 30),
+                  ),
                 )
               ],
             ),
