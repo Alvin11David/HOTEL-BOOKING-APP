@@ -137,10 +137,13 @@ class _SignUpPageState extends State<SignUpPage> {
               children: [
               Text("Already have an account?", style: AppWidget.normaltextstyle(18)),
               SizedBox(width: 10,),
-              Text("Sign In", style: TextStyle(
-                color: Colors.blue,
-                fontSize: 18,
-                fontWeight: FontWeight.bold))
+              GestureDetector(
+                onTap: (){},
+                child: Text("Sign In", style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold)),
+              )
             ])
 
             ],

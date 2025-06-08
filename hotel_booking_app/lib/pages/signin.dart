@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotel_booking_app/pages/signup.dart';
 import 'package:hotel_booking_app/services/widget_support.dart';
 
 class SignInPage extends StatefulWidget {
@@ -69,15 +70,24 @@ class _SignInPageState extends State<SignInPage> {
                     hintStyle: AppWidget.normaltextstyle(18)
                     )
                   )
-                ),          
-                Row(),
+                ),       
+              SizedBox(height: 10,),   
+                Padding(
+                  padding: const EdgeInsets.only(right: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text("Forgot Password?", style: AppWidget.normaltextstyle(18),),
+                    ],
+                  ),
+                ),
               SizedBox(height: 30,),
               Center(
                 child: Container(
                   height: 60,
                   margin: EdgeInsets.only(left:30, right: 30),
                   decoration: BoxDecoration(
-                    color: Colors.green,
+                    color: const Color.fromARGB(255, 2, 77, 138),
                     borderRadius: BorderRadius.circular(20)
                   ),
                   width: MediaQuery.of(context).size.width/2.0,
@@ -94,10 +104,15 @@ class _SignInPageState extends State<SignInPage> {
                 children: [
                 Text("Don't have an account?", style: AppWidget.normaltextstyle(18)),
                 SizedBox(width: 10,),
-                Text("Sign Up", style: TextStyle(
-                  color: Colors.blue,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold))
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage()));
+                  },
+                  child: Text("Sign Up", style: TextStyle(
+                    color: const Color.fromARGB(255, 2, 77, 138),
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold)),
+                )
               ])
             ],
             )
