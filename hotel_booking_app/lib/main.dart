@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:hotel_booking_app/firebase_options.dart';
 import 'package:hotel_booking_app/pages/bottomnav.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:hotel_booking_app/pages/signup.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -19,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Bottomnav(),
+      home: const SignUpPage(),
     );
   }
 }
