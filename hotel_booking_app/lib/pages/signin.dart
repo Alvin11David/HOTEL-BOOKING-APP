@@ -69,7 +69,8 @@ class _SignInPageState extends State<SignInPage> {
                     hintStyle: AppWidget.normaltextstyle(18)
                     )
                   )
-                ),            
+                ),          
+                Row(),
               SizedBox(height: 30,),
               Center(
                 child: Container(
