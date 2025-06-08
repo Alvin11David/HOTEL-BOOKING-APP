@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hotel_booking_app/pages/bottomnav.dart';
-
+import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
