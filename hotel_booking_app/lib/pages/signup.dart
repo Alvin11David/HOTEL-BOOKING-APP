@@ -20,7 +20,7 @@ class _SignUpPageState extends State<SignUpPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(
-                child: Image.asset("images/signup.png",
+                child: Image.asset("assets/images/signup.png",
                 height: 300,
                 width: 300,
                 fit: BoxFit.cover
@@ -136,7 +136,7 @@ class _SignUpPageState extends State<SignUpPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
               Text("Already have an account?", style: AppWidget.normaltextstyle(18)),
-              SizedBox(width: 5,),
+              SizedBox(width: 10,),
               Text("Sign In", style: TextStyle(
                 color: Colors.blue,
                 fontSize: 18,

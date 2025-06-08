@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hotel_booking_app/pages/signup.dart';
+import 'package:hotel_booking_app/pages/signin.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const SignUpPage(),
+      home: const SignInPage(),
     );
   }
 }
