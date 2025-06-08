@@ -14,7 +14,6 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -105,7 +104,6 @@ class _HomePageState extends State<HomePage> {
                         borderRadius: BorderRadius.circular(20),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.white
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -114,7 +112,7 @@ class _HomePageState extends State<HomePage> {
                             borderRadius: BorderRadius.circular(20),
                             child: Image.asset(
                               'assets/images/hotel1.jpg',
-                              width: MediaQuery.of(context).size.width / 1.5, fit: BoxFit.cover, height: 230,
+                              width: MediaQuery.of(context).size.width/1.2, fit: BoxFit.cover, height: 230,
                             ),
                           ),
                           SizedBox(height: 10),
@@ -123,7 +121,7 @@ class _HomePageState extends State<HomePage> {
                             child: Row(
                               children: [
                                 Text("Hotel Beach", style: AppWidget.headlinetextstyle(18)),
-                                SizedBox(width: MediaQuery.of(context).size.width/4.9),
+                                SizedBox(width: MediaQuery.of(context).size.width/5.0),
                                 Text("\$20", style: AppWidget.headlinetextstyle(24),)
                               ],
                             ),
@@ -135,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                               children: [
                                 Icon(Icons.location_on, color: Colors.blue, size: 30),
                                 SizedBox(width: 5),
-                                Text("Near Lake Victoria, Uganda", style: AppWidget.normaltextstyle(20)),
+                                Text("Near Lake Victoria,Uganda", style: AppWidget.normaltextstyle(20)),
                               ],
                             ),
                           )
