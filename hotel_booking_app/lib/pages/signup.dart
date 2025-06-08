@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotel_booking_app/pages/signin.dart';
 import 'package:hotel_booking_app/services/widget_support.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -138,7 +139,9 @@ class _SignUpPageState extends State<SignUpPage> {
               Text("Already have an account?", style: AppWidget.normaltextstyle(18)),
               SizedBox(width: 10,),
               GestureDetector(
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const SignInPage()));
+                },
                 child: Text("Sign In", style: TextStyle(
                   color: Colors.blue,
                   fontSize: 18,
