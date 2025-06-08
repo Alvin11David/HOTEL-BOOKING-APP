@@ -31,27 +31,6 @@ class _SignInPageState extends State<SignInPage> {
                 SizedBox(height: 10,),
                 Padding(
                   padding: const EdgeInsets.only(left: 30),
-                  child: Text("Name", style: AppWidget.headlinetextstyle(20)),
-                ),
-                SizedBox(height: 10,),
-                Container(
-                  margin: EdgeInsets.only(left:30, right: 30),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Color(0xffececf8),
-                  ),
-                  child: TextField(
-                    decoration: InputDecoration(border: InputBorder.none,
-                    prefixIcon: Icon(Icons.person,
-                    color: const Color.fromARGB(255, 2, 77, 138)),
-                    hintText: "Enter Your Name",
-                    hintStyle: AppWidget.normaltextstyle(18)
-                    )
-                  )
-                ),
-                SizedBox(height: 10,),
-                Padding(
-                  padding: const EdgeInsets.only(left: 30),
                   child: Text("Email", style: AppWidget.headlinetextstyle(20)),
                 ),
                 SizedBox(height: 10,),
@@ -63,7 +42,7 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                   child: TextField(
                     decoration: InputDecoration(border: InputBorder.none,
-                    prefixIcon: Icon(Icons.email,
+                    prefixIcon: Icon(Icons.mail,
                     color: const Color.fromARGB(255, 2, 77, 138)),
                     hintText: "Enter Your Email",
                     hintStyle: AppWidget.normaltextstyle(18)
@@ -90,28 +69,8 @@ class _SignInPageState extends State<SignInPage> {
                     hintStyle: AppWidget.normaltextstyle(18)
                     )
                   )
-                ),
-                SizedBox(height: 10,),
-              Padding(
-                padding: const EdgeInsets.only(left: 30),
-                child: Text("Confirm Password", style: AppWidget.headlinetextstyle(20)),
-              ),
-              SizedBox(height: 10,),
-              Container(
-                margin: EdgeInsets.only(left:30, right: 30),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Color(0xffececf8),
-                ),
-                child: TextField(
-                  decoration: InputDecoration(border: InputBorder.none,
-                  prefixIcon: Icon(Icons.password,
-                  color: const Color.fromARGB(255, 2, 77, 138)),
-                  hintText: "Confirm Your Password",
-                  hintStyle: AppWidget.normaltextstyle(18)
-                  )
-                )
-              ),
+                ),          
+                Row(),
               SizedBox(height: 30,),
               Center(
                 child: Container(
@@ -133,9 +92,9 @@ class _SignInPageState extends State<SignInPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                Text("Already have an account?", style: AppWidget.normaltextstyle(18)),
+                Text("Don't have an account?", style: AppWidget.normaltextstyle(18)),
                 SizedBox(width: 10,),
-                Text("Sign In", style: TextStyle(
+                Text("Sign Up", style: TextStyle(
                   color: Colors.blue,
                   fontSize: 18,
                   fontWeight: FontWeight.bold))
