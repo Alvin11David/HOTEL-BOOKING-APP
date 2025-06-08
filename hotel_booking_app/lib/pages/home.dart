@@ -121,7 +121,7 @@ class _HomePageState extends State<HomePage> {
                             child: Row(
                               children: [
                                 Text("Hotel Beach", style: AppWidget.headlinetextstyle(18)),
-                                SizedBox(width: MediaQuery.of(context).size.width/5.0),
+                                SizedBox(width: MediaQuery.of(context).size.width/3.0),
                                 Text("\$20", style: AppWidget.headlinetextstyle(24),)
                               ],
                             ),
@@ -158,7 +158,7 @@ class _HomePageState extends State<HomePage> {
                             borderRadius: BorderRadius.circular(20),
                             child: Image.asset(
                               'assets/images/hotel2.jpg',
-                              width: MediaQuery.of(context).size.width / 1.5, fit: BoxFit.cover, height: 230,
+                              width: MediaQuery.of(context).size.width / 1.19, fit: BoxFit.cover, height: 230,
                             ),
                           ),
                           SizedBox(height: 10),
@@ -167,7 +167,7 @@ class _HomePageState extends State<HomePage> {
                             child: Row(
                               children: [
                                 Text("Hotel Beach", style: AppWidget.headlinetextstyle(18)),
-                                SizedBox(width: MediaQuery.of(context).size.width/4.9),
+                                SizedBox(width: MediaQuery.of(context).size.width/3),
                                 Text("\$20", style: AppWidget.headlinetextstyle(24),)
                               ],
                             ),
@@ -204,7 +204,7 @@ class _HomePageState extends State<HomePage> {
                             borderRadius: BorderRadius.circular(20),
                             child: Image.asset(
                               'assets/images/hotel3.jpg',
-                              width: MediaQuery.of(context).size.width / 1.5, fit: BoxFit.cover, height: 230,
+                              width: MediaQuery.of(context).size.width / 1.19, fit: BoxFit.cover, height: 230,
                             ),
                           ),
                           SizedBox(height: 10),
@@ -213,7 +213,7 @@ class _HomePageState extends State<HomePage> {
                             child: Row(
                               children: [
                                 Text("Hotel Beach", style: AppWidget.headlinetextstyle(18)),
-                                SizedBox(width: MediaQuery.of(context).size.width/4.9),
+                                SizedBox(width: MediaQuery.of(context).size.width/3),
                                 Text("\$20", style: AppWidget.headlinetextstyle(24),)
                               ],
                             ),
