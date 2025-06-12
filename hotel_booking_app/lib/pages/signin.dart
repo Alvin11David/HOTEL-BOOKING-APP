@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hotel_booking_app/pages/bottomnav.dart';
 
@@ -12,6 +13,32 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
+
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
+  String email = "";
+  String password = "";
+
+  Future<void> userLogin() async {
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Bottomnav()),
+      );
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Login failed: ${e.toString()}')),
+      );
+    }
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +71,7 @@ class _SignInPageState extends State<SignInPage> {
                     color: Color(0xffececf8),
                   ),
                   child: TextField(
+                    controller: emailController,
                     decoration: InputDecoration(border: InputBorder.none,
                     prefixIcon: Icon(Icons.mail,
                     color: const Color.fromARGB(255, 2, 77, 138)),
@@ -65,6 +93,7 @@ class _SignInPageState extends State<SignInPage> {
                     color: Color(0xffececf8),
                   ),
                   child: TextField(
+                    controller: passwordController,
                     decoration: InputDecoration(border: InputBorder.none,
                     prefixIcon: Icon(Icons.lock,
                     color: const Color.fromARGB(255, 2, 77, 138)),
@@ -86,8 +115,14 @@ class _SignInPageState extends State<SignInPage> {
               SizedBox(height: 30,),
               GestureDetector(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Bottomnav()));
-                },
+                  if (emailController.text!=""&& passwordController.text!=""){
+                    setState(() {
+                      email= emailController.text;
+                      password = passwordController.text;
+                    });
+                    userLogin();
+                  }
+                  },
                 child: Center(
                   child: Container(
                     height: 60,
