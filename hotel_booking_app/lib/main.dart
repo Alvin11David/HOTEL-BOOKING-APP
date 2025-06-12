@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hotel_booking_app/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:hotel_booking_app/pages/signup.dart';
+import 'package:hotel_booking_app/hotelowner/hotel_detail.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const SignUpPage(),
+      home: const HotelDetailPage(),
     );
   }
 }
