@@ -31,6 +31,7 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                   children: [
+                    SizedBox(height: 20),
                     Container(
                       height: 200,
                       width: 200,
