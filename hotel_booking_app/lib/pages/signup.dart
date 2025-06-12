@@ -17,6 +17,7 @@ class _SignUpPageState extends State<SignUpPage> {
   TextEditingController nameController = TextEditingController();
   TextEditingController confirmPasswordController = TextEditingController();
 
+
   registration() async {
     if (password.isNotEmpty &&
         nameController.text != "" &&

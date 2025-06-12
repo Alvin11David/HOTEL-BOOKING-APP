@@ -17,6 +17,8 @@ dependencies:
   cloud_firestore: 
   firebase_auth: 
   random_string: 
+  google_sign_in:
+  shared_preferences:
 
 dev_dependencies:
   flutter_test:
