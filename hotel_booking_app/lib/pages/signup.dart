@@ -22,6 +22,9 @@ class _SignUpPageState extends State<SignUpPage> {
   TextEditingController nameController = TextEditingController();
   TextEditingController confirmPasswordController = TextEditingController();
 
+  bool _obscurePassword = true;
+  bool _obscureConfirmPassword = true;
+
 
   registration() async {
     if (password.isNotEmpty &&
@@ -198,7 +201,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
                 child: TextField(
                   controller: passwordController,
-                  obscureText: true,
+                  obscureText: _obscurePassword,
                   onChanged: (val) {
                     password = val;
                   },
@@ -210,6 +213,17 @@ class _SignUpPageState extends State<SignUpPage> {
                     ),
                     hintText: "Enter Your Password",
                     hintStyle: AppWidget.normaltextstyle(18),
+                    suffixIcon: IconButton(
+                    icon: Icon(
+                      _obscurePassword ? Icons.visibility_off : Icons.visibility,
+                      color: Colors.grey,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        _obscurePassword = !_obscurePassword;
+                      });
+                    },
+                  ),
                   ),
                 ),
               ),
@@ -230,7 +244,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
                 child: TextField(
                   controller: confirmPasswordController,
-                  obscureText: true,
+                  obscureText: _obscureConfirmPassword,
                   onChanged: (val) {
                     confirmPassword = val;
                   },
@@ -242,6 +256,17 @@ class _SignUpPageState extends State<SignUpPage> {
                     ),
                     hintText: "Confirm Your Password",
                     hintStyle: AppWidget.normaltextstyle(18),
+                    suffixIcon: IconButton(
+                    icon: Icon(
+                      _obscureConfirmPassword ? Icons.visibility_off : Icons.visibility,
+                      color: Colors.grey,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        _obscureConfirmPassword = !_obscureConfirmPassword;
+                      });
+                    },
+                  ),
                   ),
                 ),
               ),

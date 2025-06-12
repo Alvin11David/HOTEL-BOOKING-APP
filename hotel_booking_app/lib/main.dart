@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hotel_booking_app/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:hotel_booking_app/pages/signin.dart';
 import 'package:hotel_booking_app/pages/signup.dart';
 
 void main() async {

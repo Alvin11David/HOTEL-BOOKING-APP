@@ -16,6 +16,7 @@ class _SignInPageState extends State<SignInPage> {
 
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  bool _obscurePassword = true;
 
   String email = "";
   String password = "";
@@ -76,7 +77,7 @@ class _SignInPageState extends State<SignInPage> {
                     prefixIcon: Icon(Icons.mail,
                     color: const Color.fromARGB(255, 2, 77, 138)),
                     hintText: "Enter Your Email",
-                    hintStyle: AppWidget.normaltextstyle(18)
+                    hintStyle: AppWidget.normaltextstyle(18),
                     )
                   )
                 ),
@@ -94,11 +95,23 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                   child: TextField(
                     controller: passwordController,
+                    obscureText: _obscurePassword,
                     decoration: InputDecoration(border: InputBorder.none,
                     prefixIcon: Icon(Icons.lock,
                     color: const Color.fromARGB(255, 2, 77, 138)),
                     hintText: "Enter Your Password",
-                    hintStyle: AppWidget.normaltextstyle(18)
+                    hintStyle: AppWidget.normaltextstyle(18),
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        _obscurePassword ? Icons.visibility_off : Icons.visibility,
+                        color: Colors.grey,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            _obscurePassword = !_obscurePassword;
+                          });
+                        },
+                        )
                     )
                   )
                 ),       
