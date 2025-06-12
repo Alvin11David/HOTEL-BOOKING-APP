@@ -12,6 +12,13 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
+  curved_navigation_bar: 
+  firebase_core: 
+  cloud_firestore: 
+  firebase_auth: 
+  random_string: 
+  google_sign_in:
+  shared_preferences:
 
 dev_dependencies:
   flutter_test:
