@@ -24,14 +24,22 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
               ),
             ],
             ),
-            Container(
-              decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.only(topLeft: Radius.circular(30), topRight: Radius.circular(30))),
-              width: MediaQuery.of(context).size.width,
-              child: Column(
-                children: [
-                  
-                ],
-              )
+            SizedBox(height: 20,),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.only(topLeft: Radius.circular(30), topRight: Radius.circular(30))),
+                width: MediaQuery.of(context).size.width,
+                child: Column(
+                  children: [
+                    Container(
+                      height: 200,
+                      width: 200,
+                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), border: Border.all()),
+                      child: Icon(Icons.camera_alt, color: Colors.blue, size: 35)
+                    )
+                  ],
+                )
+              ),
             )
           ],
         ),
