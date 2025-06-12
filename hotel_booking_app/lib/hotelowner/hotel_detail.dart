@@ -30,17 +30,26 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                 padding: EdgeInsets.only(left: 20, right: 20),
                 decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.only(topLeft: Radius.circular(30), topRight: Radius.circular(30))),
                 width: MediaQuery.of(context).size.width,
-                child: Column(
+                child: Column(  
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: 20),
-                    Container(
-                      height: 200,
-                      width: 200,
-                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), border: Border.all(width: 2, color: Colors.black45 )),
-                      child: Icon(Icons.camera_alt, color: Colors.blue, size: 35)
+                    Center(
+                      child: Container(
+                        height: 200,
+                        width: 200,
+                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), border: Border.all(width: 2, color: Colors.black45 )),
+                        child: Icon(Icons.camera_alt, color: Colors.blue, size: 35)
+                      ),
                     ),
                     SizedBox(height: 20),
-                    Text('Hotel Name', style: AppWidget.normaltextstyle(20),)
+                    Text('Hotel Name', style: AppWidget.normaltextstyle(20),),
+                    Container(
+                      decoration: BoxDecoration(color: Color(0xFFececf8)),
+                      child: TextField(
+
+                      )
+                    )
                   ],
                 )
               ),
