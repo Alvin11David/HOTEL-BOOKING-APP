@@ -34,7 +34,7 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                     Container(
                       height: 200,
                       width: 200,
-                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), border: Border.all()),
+                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), border: Border.all(width: 2, color: Colors.black45 )),
                       child: Icon(Icons.camera_alt, color: Colors.blue, size: 35)
                     )
                   ],
