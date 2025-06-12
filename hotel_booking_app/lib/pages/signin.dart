@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hotel_booking_app/pages/home.dart';
+import 'package:hotel_booking_app/pages/bottomnav.dart';
+
 import 'package:hotel_booking_app/pages/signup.dart';
 import 'package:hotel_booking_app/services/widget_support.dart';
 
@@ -85,7 +86,7 @@ class _SignInPageState extends State<SignInPage> {
               SizedBox(height: 30,),
               GestureDetector(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Bottomnav()));
                 },
                 child: Center(
                   child: Container(

@@ -1,7 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:hotel_booking_app/pages/bottomnav.dart';
 import 'package:hotel_booking_app/pages/signin.dart';
+import 'package:hotel_booking_app/services/database.dart';
+import 'package:hotel_booking_app/services/shared_preferences.dart';
 import 'package:hotel_booking_app/services/widget_support.dart';
+import 'package:random_string/random_string.dart';
+
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -23,20 +28,30 @@ class _SignUpPageState extends State<SignUpPage> {
         nameController.text != "" &&
         emailController.text != "") {
       try {
-        UserCredential userCredential = await FirebaseAuth.instance
+        await FirebaseAuth.instance
             .createUserWithEmailAndPassword(email: email, password: password);
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            backgroundColor: Colors.green,
-            content: Text(
-              "Registration Successful!",
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        );
+            String id = randomAlphaNumeric(10);
+            Map<String, dynamic> userInfoMap = {
+              "Name": nameController.text,
+              "Email": emailController.text,
+              "Id": id, 
+            };
+            await saveUserName(nameController.text);
+            await saveUserEmail(emailController.text);
+            await saveUserId(id);
+            await DatabaseMethods().addUserInfo(userInfoMap, id);
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  backgroundColor: Colors.green,
+                  content: Text(
+                    "Registration Successful!",
+                    style: TextStyle(fontSize: 18),
+                  ),
+                ),
+              );
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => const SignInPage()),
+          MaterialPageRoute(builder: (context) => const Bottomnav()),
         );
       } on FirebaseAuthException catch (e) {
         if (e.code == 'weak-password') {
