@@ -44,10 +44,14 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                     ),
                     SizedBox(height: 20),
                     Text('Hotel Name', style: AppWidget.normaltextstyle(20),),
+                    SizedBox(height: 5),
                     Container(
-                      decoration: BoxDecoration(color: Color(0xFFececf8)),
+                      padding: EdgeInsets.only(left: 20),
+                      decoration: BoxDecoration(color: Color(0xFFececf8), borderRadius: BorderRadius.circular(10)),
                       child: TextField(
-
+                        decoration: InputDecoration(
+                          border: InputBorder.none, hintText: "Enter Hotel Name", hintStyle: AppWidget.normaltextstyle(18)
+                        ),
                       )
                     )
                   ],
