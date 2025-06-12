@@ -27,6 +27,7 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
             SizedBox(height: 20,),
             Expanded(
               child: Container(
+                padding: EdgeInsets.only(left: 20, right: 20),
                 decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.only(topLeft: Radius.circular(30), topRight: Radius.circular(30))),
                 width: MediaQuery.of(context).size.width,
                 child: Column(
@@ -37,7 +38,9 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                       width: 200,
                       decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), border: Border.all(width: 2, color: Colors.black45 )),
                       child: Icon(Icons.camera_alt, color: Colors.blue, size: 35)
-                    )
+                    ),
+                    SizedBox(height: 20),
+                    Text('Hotel Name', style: AppWidget.normaltextstyle(20),)
                   ],
                 )
               ),
