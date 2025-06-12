@@ -24,6 +24,15 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
               ),
             ],
             ),
+            Container(
+              decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.only(topLeft: Radius.circular(30), topRight: Radius.circular(30))),
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                children: [
+                  
+                ],
+              )
+            )
           ],
         ),
       )
