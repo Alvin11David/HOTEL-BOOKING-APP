@@ -14,10 +14,13 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
     return Scaffold(
       backgroundColor: Colors.blue,
       body: Container(
+        margin: EdgeInsets.only(top: 40),
         child: Column(
           children: [
-            Row(children: [
-              Text("Hotel Details", style: AppWidget.whitetextstyle(22),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+              Text("Hotel Details", style: AppWidget.boldwhitetextstyle(26),
               ),
             ],
             ),
