@@ -183,6 +183,12 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                         )
                       ),
                       SizedBox(height: 20),
+                      Container(
+                        decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(10)),
+                        width: MediaQuery.of(context).size.width/1.5,
+                        child: Center(child: Text("Submit", style: AppWidget.boldwhitetextstyle(26)))
+                      ),
+                      SizedBox(height: 30),
                     ],
                   )
                 ),
