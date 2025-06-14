@@ -9,56 +9,157 @@ class HotelDetailPage extends StatefulWidget {
 }
 
 class _HotelDetailPageState extends State<HotelDetailPage> {
+  bool isChecked = false,
+      isChecked1 = false,
+      isChecked2 = false,
+      isChecked3 = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
-      body: Container(
-        margin: EdgeInsets.only(top: 40),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-              Text("Hotel Details", style: AppWidget.boldwhitetextstyle(26),
+      body: SingleChildScrollView(
+        child: Container(
+          margin: EdgeInsets.only(top: 40),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                Text("Hotel Details", style: AppWidget.boldwhitetextstyle(26),
+                ),
+              ],
               ),
-            ],
-            ),
-            SizedBox(height: 20,),
-            Expanded(
-              child: Container(
-                padding: EdgeInsets.only(left: 20, right: 20),
-                decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.only(topLeft: Radius.circular(30), topRight: Radius.circular(30))),
-                width: MediaQuery.of(context).size.width,
-                child: Column(  
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(height: 20),
-                    Center(
-                      child: Container(
-                        height: 200,
-                        width: 200,
-                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), border: Border.all(width: 2, color: Colors.black45 )),
-                        child: Icon(Icons.camera_alt, color: Colors.blue, size: 35)
-                      ),
-                    ),
-                    SizedBox(height: 20),
-                    Text('Hotel Name', style: AppWidget.normaltextstyle(20),),
-                    SizedBox(height: 5),
-                    Container(
-                      padding: EdgeInsets.only(left: 20),
-                      decoration: BoxDecoration(color: Color(0xFFececf8), borderRadius: BorderRadius.circular(10)),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          border: InputBorder.none, hintText: "Enter Hotel Name", hintStyle: AppWidget.normaltextstyle(18)
+              SizedBox(height: 20,),
+              SingleChildScrollView(
+                child: Container(
+                  padding: EdgeInsets.only(left: 20, right: 20),
+                  decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.only(topLeft: Radius.circular(30), topRight: Radius.circular(30))),
+                  width: MediaQuery.of(context).size.width,
+                  child: Column(  
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 20),
+                      Center(
+                        child: Container(
+                          height: 200,
+                          width: 200,
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), border: Border.all(width: 2, color: Colors.black45 )),
+                          child: Icon(Icons.camera_alt, color: Colors.blue, size: 35)
                         ),
-                      )
-                    )
-                  ],
-                )
-              ),
-            )
-          ],
+                      ),
+                      SizedBox(height: 20),
+                      Text('Hotel Name', style: AppWidget.normaltextstyle(20),),
+                      SizedBox(height: 5),
+                      Container(
+                        padding: EdgeInsets.only(left: 20),
+                        decoration: BoxDecoration(color: Color(0xFFececf8), borderRadius: BorderRadius.circular(10)),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: InputBorder.none, hintText: "Enter Hotel Name", hintStyle: AppWidget.normaltextstyle(18)
+                          ),
+                        )
+                      ),
+                      SizedBox(height: 20),
+                      Text('Hotel Room Charges', style: AppWidget.normaltextstyle(20),),
+                      SizedBox(height: 5),
+                      Container(
+                        padding: EdgeInsets.only(left: 20),
+                        decoration: BoxDecoration(color: Color(0xFFececf8), borderRadius: BorderRadius.circular(10)),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: InputBorder.none, hintText: "Enter Room Charges", hintStyle: AppWidget.normaltextstyle(18)
+                          ),
+                        )
+                      ),
+                      SizedBox(height: 5),
+                      Text("What services do you want to offer?", style: AppWidget.normaltextstyle(20)),
+                      SizedBox(height: 5),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Checkbox(
+                            value: isChecked,
+                            onChanged: (bool? value) {
+                              setState(() {
+                                isChecked = value!;
+                              });
+                            },
+                          ),
+                          Icon(
+                            Icons.wifi,
+                            color: Colors.blue,
+                            size: 30,
+                          ),
+                          SizedBox(width: 10),
+                          Text("WiFi", style: AppWidget.normaltextstyle(23)),
+                        ],
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Checkbox(
+                            value: isChecked,
+                            onChanged: (bool? value) {
+                              setState(() {
+                                isChecked = value!;
+                              });
+                            },
+                          ),
+                          Icon(
+                            Icons.tv,
+                            color: Colors.blue,
+                            size: 30,
+                          ),
+                          SizedBox(width: 10),
+                          Text("HDTV", style: AppWidget.normaltextstyle(23)),
+                        ],
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Checkbox(
+                            value: isChecked,
+                            onChanged: (bool? value) {
+                              setState(() {
+                                isChecked = value!;
+                              });
+                            },
+                          ),
+                          Icon(
+                            Icons.kitchen,
+                            color: Colors.blue,
+                            size: 30,
+                          ),
+                          SizedBox(width: 10),
+                          Text("Kitchen", style: AppWidget.normaltextstyle(23)),
+                        ],
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Checkbox(
+                            value: isChecked,
+                            onChanged: (bool? value) {
+                              setState(() {
+                                isChecked = value!;
+                              });
+                            },
+                          ),
+                          Icon(
+                            Icons.bathroom,
+                            color: Colors.blue,
+                            size: 30,
+                          ),
+                          SizedBox(width: 10),
+                          Text("Bathroom", style: AppWidget.normaltextstyle(23)),
+                        ],
+                      ),
+                    ],
+                  )
+                ),
+              )
+            ],
+          ),
         ),
       )
     );
