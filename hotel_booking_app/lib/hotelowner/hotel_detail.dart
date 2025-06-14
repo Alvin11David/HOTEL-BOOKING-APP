@@ -72,6 +72,19 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                         )
                       ),
                       SizedBox(height: 5),
+                      SizedBox(height: 20),
+                      Text('Hotel Address', style: AppWidget.normaltextstyle(20),),
+                      SizedBox(height: 5),
+                      Container(
+                        padding: EdgeInsets.only(left: 20),
+                        decoration: BoxDecoration(color: Color(0xFFececf8), borderRadius: BorderRadius.circular(10)),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: InputBorder.none, hintText: "Enter Hotel Address", hintStyle: AppWidget.normaltextstyle(18)
+                          ),
+                        )
+                      ),
+                      SizedBox(height: 5),
                       Text("What services do you want to offer?", style: AppWidget.normaltextstyle(20)),
                       SizedBox(height: 5),
                       Row(
@@ -154,6 +167,22 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                           Text("Bathroom", style: AppWidget.normaltextstyle(23)),
                         ],
                       ),
+                      SizedBox(height: 20),
+                      Text('Hotel Room Charges', style: AppWidget.normaltextstyle(20),),
+                      SizedBox(height: 5),
+                      Text("Hotel Description", style: AppWidget.normaltextstyle(20)),
+                      SizedBox(height: 5),
+                      Container(
+                        padding: EdgeInsets.only(left: 20),
+                        decoration: BoxDecoration(color: Color(0xFFececf8), borderRadius: BorderRadius.circular(10)),
+                        child: TextField(
+                          maxLines: 6,
+                          decoration: InputDecoration(
+                            border: InputBorder.none, hintText: "Enter Hotel Description", hintStyle: AppWidget.normaltextstyle(18)
+                          ),
+                        )
+                      ),
+                      SizedBox(height: 20),
                     ],
                   )
                 ),
