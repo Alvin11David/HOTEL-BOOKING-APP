@@ -241,7 +241,18 @@ Future getImage() async {
                             "Bathroom": isChecked3?"true": "false",
                             "Id": addId,
                           };
+                          await DatabaseMethods().addHotel(addHotel, addId);
+                          ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            backgroundColor: Colors.green,
+                            content: Text(
+                              "Registration Successful!",
+                              style: TextStyle(fontSize: 18),
+                  ),
+                ),
+              );
                         },
+
                         child: Center(
                           child: Container(
                             height: 60,
