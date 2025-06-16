@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:hotel_booking_app/services/database.dart';
 import 'package:hotel_booking_app/services/widget_support.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:random_string/random_string.dart';
@@ -246,8 +247,10 @@ Future getImage() async {
                           SnackBar(
                             backgroundColor: Colors.green,
                             content: Text(
-                              "Registration Successful!",
-                              style: TextStyle(fontSize: 18),
+                              "Hotel Details have been uploded successfully!",
+                              style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,),
                   ),
                 ),
               );
