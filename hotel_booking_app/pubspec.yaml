@@ -19,6 +19,8 @@ dependencies:
   random_string: 
   google_sign_in:
   shared_preferences:
+  image_picker:
+  firebase_storage:
 
 dev_dependencies:
   flutter_test:

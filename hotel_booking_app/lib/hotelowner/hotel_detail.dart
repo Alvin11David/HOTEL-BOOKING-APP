@@ -1,5 +1,10 @@
+import 'dart:io';
+
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:hotel_booking_app/services/widget_support.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:random_string/random_string.dart';
 
 class HotelDetailPage extends StatefulWidget {
   const HotelDetailPage({super.key});
@@ -14,10 +19,25 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
       isChecked2 = false,
       isChecked3 = false;
 
+      File? selectedImage;
+      final ImagePicker _picker = ImagePicker();
+
       TextEditingController hotelnamecontroller = new TextEditingController();
       TextEditingController hotelchargescontroller = new TextEditingController();
       TextEditingController hoteladdresscontroller = new TextEditingController();
       TextEditingController hoteldescriptioncontroller = new TextEditingController();
+
+
+
+Future getImage() async {
+  
+  var image = await _picker.pickImage(source: ImageSource.gallery);
+  selectedImage = File(image!.path);
+  setState(() {
+
+  });
+}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,14 +64,27 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(height: 20),
-                      Center(
-                        child: Container(
+                    selectedImage!= null? 
+                    Container(
                           height: 200,
                           width: 200,
-                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), border: Border.all(width: 2, color: Colors.black45 )),
-                          child: Icon(Icons.camera_alt, color: Colors.blue, size: 35)
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: Image.file(selectedImage!, 
+                            fit: BoxFit.cover)),
+                    ): GestureDetector(
+                      onTap: () {
+                        getImage();
+                      },
+                      child: Center(
+                          child: Container(
+                            height: 200,
+                            width: 200,
+                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), border: Border.all(width: 2, color: Colors.black45 )),
+                            child: Icon(Icons.camera_alt, color: Colors.blue, size: 35)
+                          ),
                         ),
-                      ),
+                    ),
                       SizedBox(height: 20),
                       Text('Hotel Name', style: AppWidget.normaltextstyle(20),),
                       SizedBox(height: 5),
@@ -59,6 +92,7 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                         padding: EdgeInsets.only(left: 20),
                         decoration: BoxDecoration(color: Color(0xFFececf8), borderRadius: BorderRadius.circular(10)),
                         child: TextField(
+                          controller: hotelnamecontroller,
                           decoration: InputDecoration(
                             border: InputBorder.none, hintText: "Enter Hotel Name", hintStyle: AppWidget.normaltextstyle(18)
                           ),
@@ -71,6 +105,7 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                         padding: EdgeInsets.only(left: 20),
                         decoration: BoxDecoration(color: Color(0xFFececf8), borderRadius: BorderRadius.circular(10)),
                         child: TextField(
+                          controller: hotelchargescontroller,
                           decoration: InputDecoration(
                             border: InputBorder.none, hintText: "Enter Room Charges", hintStyle: AppWidget.normaltextstyle(18)
                           ),
@@ -84,6 +119,7 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                         padding: EdgeInsets.only(left: 20),
                         decoration: BoxDecoration(color: Color(0xFFececf8), borderRadius: BorderRadius.circular(10)),
                         child: TextField(
+                          controller: hoteladdresscontroller,
                           decoration: InputDecoration(
                             border: InputBorder.none, hintText: "Enter Hotel Address", hintStyle: AppWidget.normaltextstyle(18)
                           ),
@@ -186,12 +222,26 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                         )
                       ),
                       SizedBox(height: 20),
-                      Center(
-                        child: Container(
-                          height: 60,
-                          decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(10)),
-                          width: MediaQuery.of(context).size.width/1.5,
-                          child: Center(child: Text("Submit", style: AppWidget.boldwhitetextstyle(26)))
+                      GestureDetector(
+                        onTap: () async {
+                          String addId = randomAlphaNumeric(10);
+                          //Reference firebaseStorageRef = FirebaseStorage.instance.ref().child("blogImage").child(addId);
+                          //final UploadTask task = firebaseStorageRef.putFile(selectedImage!);
+                          //var downloadUrl = await(await task).ref.getDownloadURL();
+
+                          Map<String, dynamic> addHotel={
+                            "Image": "",
+                            "HotelName": hotelnamecontroller.text,
+                            "HotelCharges": hotelchargescontroller.text,
+                          };
+                        },
+                        child: Center(
+                          child: Container(
+                            height: 60,
+                            decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(10)),
+                            width: MediaQuery.of(context).size.width/1.5,
+                            child: Center(child: Text("Submit", style: AppWidget.boldwhitetextstyle(26)))
+                          ),
                         ),
                       ),
                       SizedBox(height: 30),
