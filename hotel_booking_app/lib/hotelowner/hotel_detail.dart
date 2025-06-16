@@ -229,7 +229,7 @@ Future getImage() async {
                           //final UploadTask task = firebaseStorageRef.putFile(selectedImage!);
                           //var downloadUrl = await(await task).ref.getDownloadURL();
 
-                          Map<String, dynamic> addHotel={
+                          Map<String, dynamic> addHotel = {
                             "Image": "",
                             "HotelName": hotelnamecontroller.text,
                             "HotelCharges": hotelchargescontroller.text,
@@ -239,6 +239,7 @@ Future getImage() async {
                             "HDTV": isChecked1?"true": "false",
                             "Kitchen": isChecked2?"true": "false",
                             "Bathroom": isChecked3?"true": "false",
+                            "Id": addId,
                           };
                         },
                         child: Center(
