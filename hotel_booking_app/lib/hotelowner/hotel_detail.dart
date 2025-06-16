@@ -233,6 +233,8 @@ Future getImage() async {
                             "Image": "",
                             "HotelName": hotelnamecontroller.text,
                             "HotelCharges": hotelchargescontroller.text,
+                            "HotelAddress": hoteladdresscontroller.text,
+                            "HotelDescription": hoteldescriptioncontroller.text,
                           };
                         },
                         child: Center(
