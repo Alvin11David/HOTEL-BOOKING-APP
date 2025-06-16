@@ -14,4 +14,9 @@ class DatabaseMethods{
     .doc(id)
     .set(hotelInfoMap);
   }
+
+  Future<Stream<QuerySnapshot>> getallHotels() async {
+    return await FirebaseFirestore.instance.collection("Hotel").snapshots();
+  }
+
 }
