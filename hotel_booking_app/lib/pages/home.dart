@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotel_booking_app/services/database.dart';
 import 'package:hotel_booking_app/services/widget_support.dart';
 
 class HomePage extends StatefulWidget {
@@ -9,6 +10,21 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  Stream? hotelStream;
+
+  getontheload() async {
+    hotelStream = await DatabaseMethods().getallHotels();
+    setState(() {
+
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getontheload();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
