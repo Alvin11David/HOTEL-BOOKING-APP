@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:hotel_booking_app/hotelowner/owner_home.dart';
 import 'package:hotel_booking_app/services/database.dart';
 import 'package:hotel_booking_app/services/widget_support.dart';
 import 'package:image_picker/image_picker.dart';
@@ -251,11 +252,11 @@ Future getImage() async {
                               style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,),
-                  ),
-                ),
-              );
+                              ),
+                            ),
+                          );
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => OwnerHome()));
                         },
-
                         child: Center(
                           child: Container(
                             height: 60,
