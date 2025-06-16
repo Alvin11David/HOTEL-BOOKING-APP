@@ -13,6 +13,11 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
       isChecked1 = false,
       isChecked2 = false,
       isChecked3 = false;
+
+      TextEditingController hotelnamecontroller = new TextEditingController();
+      TextEditingController hotelchargescontroller = new TextEditingController();
+      TextEditingController hoteladdresscontroller = new TextEditingController();
+      TextEditingController hoteldescriptioncontroller = new TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -111,10 +116,10 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Checkbox(
-                            value: isChecked,
+                            value: isChecked1,
                             onChanged: (bool? value) {
                               setState(() {
-                                isChecked = value!;
+                                isChecked1 = value!;
                               });
                             },
                           ),
@@ -131,10 +136,10 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Checkbox(
-                            value: isChecked,
+                            value: isChecked2,
                             onChanged: (bool? value) {
                               setState(() {
-                                isChecked = value!;
+                                isChecked2 = value!;
                               });
                             },
                           ),
@@ -151,10 +156,10 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Checkbox(
-                            value: isChecked,
+                            value: isChecked3,
                             onChanged: (bool? value) {
                               setState(() {
-                                isChecked = value!;
+                                isChecked3 = value!;
                               });
                             },
                           ),
@@ -168,8 +173,6 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                         ],
                       ),
                       SizedBox(height: 20),
-                      Text('Hotel Room Charges', style: AppWidget.normaltextstyle(20),),
-                      SizedBox(height: 5),
                       Text("Hotel Description", style: AppWidget.normaltextstyle(20)),
                       SizedBox(height: 5),
                       Container(
@@ -183,10 +186,13 @@ class _HotelDetailPageState extends State<HotelDetailPage> {
                         )
                       ),
                       SizedBox(height: 20),
-                      Container(
-                        decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(10)),
-                        width: MediaQuery.of(context).size.width/1.5,
-                        child: Center(child: Text("Submit", style: AppWidget.boldwhitetextstyle(26)))
+                      Center(
+                        child: Container(
+                          height: 60,
+                          decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(10)),
+                          width: MediaQuery.of(context).size.width/1.5,
+                          child: Center(child: Text("Submit", style: AppWidget.boldwhitetextstyle(26)))
+                        ),
                       ),
                       SizedBox(height: 30),
                     ],
