@@ -235,6 +235,10 @@ Future getImage() async {
                             "HotelCharges": hotelchargescontroller.text,
                             "HotelAddress": hoteladdresscontroller.text,
                             "HotelDescription": hoteldescriptioncontroller.text,
+                            "WiFi": isChecked?"true": "false",
+                            "HDTV": isChecked1?"true": "false",
+                            "Kitchen": isChecked2?"true": "false",
+                            "Bathroom": isChecked3?"true": "false",
                           };
                         },
                         child: Center(
